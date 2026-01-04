@@ -44,7 +44,6 @@
 }
 
 * {
-  scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -185,6 +184,7 @@ a:hover {
     linear-gradient(120deg, rgba(124, 244, 255, 0.14), rgba(168, 85, 247, 0.18), rgba(56, 189, 248, 0.12));
   filter: blur(70px);
   animation: auroraShift 16s ease-in-out infinite alternate;
+  will-change: transform;
 }
 
 .light .aurora-beams {

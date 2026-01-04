@@ -20,11 +20,11 @@ import { Galaxy } from "./galaxy";
 function LenisProvider() {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.15,
+      duration: 1.6,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
-      syncTouch: false,
-      lerp: 0.1,
-      gestureOrientation: "vertical",
+      syncTouch: true,
+      touchMultiplier: 2,
     });
 
     let frame: number;
